@@ -204,19 +204,18 @@
                   // KM Script
                       (function(d, m) {
                         var defaultSettings = {
-                          defaultBotIds: ["appoyo-z4lf9"],
-                           
-                          skipRouting: true
+                          "defaultBotIds": ["appoyo-z4lf9"],
+                           "defaultAssignee": "appoyo-z4lf9",
+                          "skipRouting": true
                         };
                         var kommunicateSettings = {
-                          appId: "1d862764e8567f7e84eb1926b003fbb2e",
-                            metadata: {
+                          "appId": "1d862764e8567f7e84eb1926b003fbb2e",
+                            "metadata": {
                             KM_SOURCE: "KOMMUNICATE_DASHBOARD"
                           },
-                          popupWidget: true
+                          "popupWidget": true
                         };
-                        kommunicateSettings.onInit = function(response) {
-                          "appoyo-z4lf9" && Kommunicate.updateSettings(defaultSettings);
+                        kommunicateSettings.onInit = function(response) { Kommunicate.updateSettings(defaultSettings);
                           // Kommunicate.launchConversation();
                         };
                         var s = document.createElement("script");
